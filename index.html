@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Copys | Break The Pattern</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+    
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="Break The Pattern Logo" class="brand-logo">
+            </div>
+            <div class="kai-avatar-container">
+                <div class="avatar-glow"></div>
+                <!-- Using one of the provided Kai avatars -->
+                <img src="assets/avatar.jpg" alt="Kai Avatar" class="kai-avatar">
+            </div>
+            <div class="header-text">
+                <p class="kai-message"><i class="fa-solid fa-bolt"></i> EJECUTA. AJUSTA. EVOLUCIONA.</p>
+                <h1 class="main-title">GENERADOR DE <span class="text-glow">COPYS EN MINUTOS</span></h1>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="content-wrapper">
+            
+            <div class="intro-box">
+                <i class="fa-solid fa-terminal prompt-icon"></i>
+                <h2>¡TRANSFORMERS!</h2>
+                <p>Sigue este sistema estructurado para crear copies de alta conversión usando IA en tiempo récord.</p>
+            </div>
+
+            <!-- PROMPT 1 -->
+            <section class="prompt-section">
+                <div class="section-header">
+                    <span class="step-badge">1</span>
+                    <h2 class="section-title">Prompt para generar texto principal</h2>
+                </div>
+                
+                <p class="instruction-text">
+                    <i class="fa-solid fa-hand-pointer text-glow"></i> <strong>MODIFICA, PARA LUEGO COPIAR Y PEGAR ESTE PROMPT EN CHATGPT</strong>
+                </p>
+
+                <div class="code-panel">
+                    <div class="panel-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="panel-title">meta_ads_prompt_v1.txt</span>
+                        <button class="copy-btn" data-target="prompt1">
+                            <i class="fa-regular fa-copy"></i> Copiar Prompt
+                        </button>
+                    </div>
+                    <div class="panel-body" id="prompt1">
+Eres un experto en e-commerce, publicidad y copywriting. El texto principal es aquel descripción larga que acompaña el creativo del anuncio en Meta. Dame 5 opciones de textos principales para anuncios en Meta, diferentes entre sí, de los cuales 3 de ellos estén bajo una estructura PAS (Problema, Agitación, Solución) y 2 de ellos bajo una estructura AIDA (Atención, Interés, Deseo, Acción. Utiliza en general un tono persuasivo y casual, también utiliza emojis alusivos, evita utilizar palabras clave que puedan generar problemas con las políticas de anuncios de la plataforma y básate en la siguiente información para realizarlos:
+
+1️⃣ Descripción producto: [COPIA Y PEGA TODA TU DESCRIPCIÓN AQUÍ]
+2️⃣ Investigación de mercado y avatar: [ACÁ EL AVATAR, ÁNGULO DE VENTAS, DOLORES Y DESEOS MANIFIESTOS U OCULTOS QUE COMUNICARÁS PARA TU PRODUCTO]
+3️⃣ Objetivo del anuncio: [VENTAS A TRAVÉS DE PÁGINA WEB, CONVERSACIÓN EN WHATSAPP]
+4️⃣ Llamado a la acción (CTA): [EJEMPLO: "COMPRA AHORA", "REGÍSTRATE GRATIS", "DESCUBRE MÁS"]
+
+Finalmente, evita utilizar nombres de marcas e incluye información de compra como: pago contra entrega, paga en casa, paga al recibir, promociones disponibles.</div>
+                </div>
+
+                <div class="pro-tip">
+                    <div class="pro-tip-icon">
+                        <img src="assets/avatar.jpg" alt="Kai" class="small-kai">
+                    </div>
+                    <div class="pro-tip-content">
+                        <h4>CONSEJO DEL GUARDIÁN:</h4>
+                        <p>Pídele a ChatGPT que te entregue más opciones en caso de que las 5 primeras no te hayan gustado y después de escogerlos, pide las opciones de títulos.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROMPT 2 -->
+            <section class="prompt-section">
+                <div class="section-header">
+                    <span class="step-badge">2</span>
+                    <h2 class="section-title">Prompt para generar títulos y descripciones</h2>
+                </div>
+                
+                <p class="instruction-text">
+                    <i class="fa-solid fa-hand-pointer text-glow"></i> <strong>MODIFICA, PARA LUEGO COPIAR Y PEGAR ESTE PROMPT EN CHATGPT</strong>
+                </p>
+
+                <div class="code-panel">
+                    <div class="panel-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="panel-title">titles_desc_prompt_v2.txt</span>
+                        <button class="copy-btn" data-target="prompt2">
+                            <i class="fa-regular fa-copy"></i> Copiar Prompt
+                        </button>
+                    </div>
+                    <div class="panel-body" id="prompt2">
+Ahora, dame 5 opciones para títulos de máximo 5 palabras, para ubicar en un encabezado como título del anuncio (justo al lado del botón del anuncio). Con el objetivo de que llamen la atención (utiliza emojis), generen confianza, activen gatillos mentales o impulsen a tomar la acción del anuncio. Incluye en alguna opción, información de compra como envío gratuito, pagar en casa o recomendado por clientes.
+
+Después, dame 5 opciones de descripciones para el título del anuncio. Estas deben tener máximo 4 palabras y se ubica debajo del título anterior, con el propósito de que llamen la atención (utiliza emojis), generen confianza, activen gatillos mentales o impulsen a tomar la acción del anuncio.</div>
+                </div>
+            </section>
+
+            <!-- FOOTER NOTE -->
+            <footer class="final-note">
+                <div class="success-banner">
+                    <h3><i class="fa-solid fa-check-circle text-glow"></i> ¡Y eso es todo Transformers!</h3>
+                    <p>No olvides llevar registro en tu carpeta de Drive de todo esto.</p>
+                </div>
+                
+                <div class="impact-statement">
+                    <span class="bracket">[</span>
+                    <p>Nota: copys que tardan horas, <span class="text-glow">ahora los harás en minutos.</span></p>
+                    <span class="bracket">]</span>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="particles.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
