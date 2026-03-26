@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas Oficiales | Break The Pattern</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome (for icons if needed, but we will rely mostly on exact shapes from CSS) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet (includes original brand styles + our new specific link styles) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="grid-bg">
+    <canvas id="particleCanvas"></canvas>
+    
+    <div class="container links-container">
+        
+        <!-- HEADER (optional, minimal version for this page) -->
+        <header class="header" style="margin-bottom: 2rem;">
+            <div class="logo-container" style="margin-bottom: 1rem;">
+                <img src="assets/logo.png" alt="Break The Pattern Logo" class="brand-logo" style="max-width: 250px;">
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-btn"><i class="fa-solid fa-arrow-left"></i> Volver a Generador de Copys</a>
+            </div>
+        </header>
+
+        <!-- WARNING BOX (RED) -->
+        <div class="custom-card card-red mb-3">
+            <h2 class="card-title text-red"><span class="square bg-red"></span> LEE ESTO ANTES DE REGISTRARTE EN CUALQUIER HERRAMIENTA</h2>
+            <p class="text-gray mb-2">Todos los enlaces son OFICIALES de afiliado. Registrarte por otro enlace hace que pierdas beneficios, no podamos hacer seguimiento de tu cuenta y puedas dañar los enlaces para toda la comunidad.</p>
+            <p class="text-white"><span class="square bg-yellow"></span> <strong>El video del módulo te dice CUÁNDO registrarte. Si el video no lo ha dicho, todavía NO es el momento.</strong></p>
+        </div>
+
+        <!-- 1. DROPI (GREEN) -->
+        <div class="custom-card card-green mb-3 drop-card">
+            <h2 class="card-title text-green"><span class="square bg-green"></span> 1. DROPI — Plataforma de dropshipping COD</h2>
+            <p class="text-gray mb-3">Gestiona productos, pedidos y proveedores. Tus clientes pagan contra entrega, sin tarjeta de crédito.</p>
+            
+            <ul class="feature-list list-green mb-4">
+                <li><span>✓</span> Líder de dropshipping COD en Latinoamérica</li>
+                <li><span>✓</span> Proveedores locales con envíos rápidos</li>
+                <li><span>✓</span> Integración directa con tu tienda y pasarela de pagos</li>
+            </ul>
+
+            <div class="links-row mb-3">
+                <a href="https://app.dropi.co/auth/register?afl=451316" target="_blank" class="cyber-link border-green">
+                    <div class="link-left"><span class="square bg-green" style="opacity: 0.7"></span> Colombia</div>
+                    <div class="link-right">app.dropi.co/auth/register?afl=451316 <span class="arrow">→</span></div>
+                </a>
+                <a href="https://app.dropi.cl/auth/register?afl=240445" target="_blank" class="cyber-link border-green">
+                    <div class="link-left"><span class="square bg-green" style="opacity: 0.7"></span> Chile</div>
+                    <div class="link-right">app.dropi.cl/auth/register?afl=240445 <span class="arrow">→</span></div>
+                </a>
+                <a href="https://app.dropi.ec/auth/register?afl=85651" target="_blank" class="cyber-link border-green">
+                    <div class="link-left"><span class="square bg-green" style="opacity: 0.7"></span> Ecuador</div>
+                    <div class="link-right">app.dropi.ec/auth/register?afl=85651 <span class="arrow">→</span></div>
+                </a>
+            </div>
+
+            <p class="note-text"><span class="square bg-yellow"></span> Si tu país no aparece, espera. Próximamente habrá enlaces para todos los países LATAM. <span class="dot-separator">•</span> No compartas estos enlaces fuera de la mentoría.</p>
+        </div>
+
+        <!-- 2. RELEASE IT (PURPLE) -->
+        <div class="custom-card card-purple mb-3">
+            <h2 class="card-title text-purple"><span class="square bg-purple"></span> 2. RELEASE IT — Pasarela COD + Automatización</h2>
+            <p class="text-gray mb-4">Conecta tu tienda con Dropi automáticamente. El pedido llega solo, sin intervención manual.</p>
+            
+            <p class="text-gray mb-2">BENEFICIOS EXCLUSIVOS CON NUESTRO ENLACE:</p>
+            
+            <div class="benefits-grid mb-4">
+                <div class="benefit-box bg-orange">
+                    <span class="square bg-white"></span>
+                    <div>
+                        <strong>120 órdenes COD gratis/mes</strong>
+                        <span>2 meses (doble de lo normal)</span>
+                    </div>
+                </div>
+                <div class="benefit-box bg-orange-dark">
+                    <span class="square bg-orange-light"></span>
+                    <div>
+                        <strong>Formularios validados</strong>
+                        <span>probados en nuestras tiendas</span>
+                    </div>
+                </div>
+                <div class="benefit-box bg-lime">
+                    <span class="square bg-white"></span>
+                    <div>
+                        <strong>Funciones PRO</strong>
+                        <span>menús condicionales + avanzadas</span>
+                    </div>
+                </div>
+                <div class="benefit-box bg-lime-light">
+                    <span class="square bg-blue"></span>
+                    <div>
+                        <strong>Soporte 24/7 WhatsApp</strong>
+                        <span>+1 (470) 828-5622</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://releas.it/codform/breakthepattern" target="_blank" class="cyber-link border-purple single-link mb-3">
+                <div class="link-left"><span class="square bg-white" style="opacity: 0.7"></span> Release It — CODE FORM</div>
+                <div class="link-right">releas.it/codform/breakthepattern <span class="arrow">→</span></div>
+            </a>
+
+            <p class="note-text"><span class="square bg-red"></span> <strong class="text-red">Al escribir al soporte di exactamente: "Soy parte de la comunidad BREAK THE PATTERN" — activa tus beneficios.</strong></p>
+        </div>
+
+        <!-- 3. SHOPIFY (BLUE) -->
+        <div class="custom-card card-blue mb-3">
+            <h2 class="card-title text-blue"><span class="square bg-blue"></span> 3. SHOPIFY — Tu tienda virtual</h2>
+            <p class="text-gray mb-3">Construye tu tienda online. El estándar mundial para e-commerce, integrado con Dropi, Release It y las plataformas publicitarias.</p>
+            
+            <ul class="feature-list list-blue mb-4">
+                <li><span>✓</span> La más robusta y confiable para e-commerce profesional</li>
+                <li><span>✓</span> Integración nativa con Meta Ads y TikTok Ads</li>
+                <li><span>✓</span> Soporte directo desde la mentoría al registrarte con nuestro enlace</li>
+            </ul>
+
+            <a href="https://shopify.com/co/oferta-prueba-gratis" target="_blank" class="cyber-link border-blue single-link mb-3">
+                <div class="link-left"><span class="square bg-white" style="opacity: 0.7"></span> Shopify — Plan de prueba especial</div>
+                <div class="link-right">shopify.com/co/oferta-prueba-gratis <span class="arrow">→</span></div>
+            </a>
+
+            <p class="note-text"><span class="square bg-yellow"></span> No crees tu cuenta por Google ni por otro enlace. <span class="dot-separator">•</span> No actives ningún plan de pago hasta que el video del módulo te lo indique.</p>
+        </div>
+
+        <!-- 4. CHATEA PRO (GREEN HIGHLIGHT) -->
+        <div class="custom-card card-green-alt mb-3">
+            <h2 class="card-title text-green"><span class="square bg-green"></span> 4. CHATEA PRO — Automatización de WhatsApp</h2>
+            <p class="text-gray mb-3">Automatiza mensajes, seguimiento de pedidos y confirmaciones. Sin estar pegado al teléfono todo el día.</p>
+            
+            <ul class="feature-list list-green mb-4">
+                <li><span>✓</span> Ahorra horas de trabajo manual todos los días</li>
+                <li><span>✓</span> Mejora la experiencia de tus clientes con respuestas rápidas</li>
+                <li><span>✓</span> 14 días completamente gratis para probarla mientras arrancas</li>
+            </ul>
+
+            <a href="https://referidos.chateapro.app" target="_blank" class="cyber-link border-green single-link mb-3">
+                <div class="link-left"><span class="square bg-green" style="opacity: 0.7"></span> Chatea Pro — 14 días GRATIS</div>
+                <div class="link-right">referidos.chateapro.app <span class="arrow">→</span></div>
+            </a>
+
+            <p class="note-text"><span class="square bg-yellow"></span> Usa este enlace. No vayas directo a la página principal.</p>
+        </div>
+
+        <!-- 5. CUENTAS PUBLICITARIAS (YELLOW) -->
+        <div class="custom-card card-yellow mb-4">
+            <h2 class="card-title text-yellow"><span class="square bg-yellow"></span> 5. CUENTAS PUBLICITARIAS — Meta Ads & TikTok Ads</h2>
+            <p class="text-gray mb-4">La publicidad es el motor que trae clientes a tu tienda. Configúralas en el orden correcto para evitar bloqueos.</p>
+            
+            <div class="ads-container">
+                <!-- META BUSINESS -->
+                <div class="custom-card inner-card card-blue-dark">
+                    <h3 class="card-title text-blue-light"><span class="square bg-blue-light"></span> META BUSINESS</h3>
+                    <p class="text-gray mb-3" style="font-size: 0.85rem;">Facebook e Instagram Ads</p>
+                    
+                    <ul class="feature-list list-blue-light mb-4" style="font-size: 0.9rem;">
+                        <li><span>-</span> Business Manager correcto</li>
+                        <li><span>-</span> Píxel de seguimiento</li>
+                        <li><span>-</span> Campañas sin bloqueos</li>
+                    </ul>
+
+                    <a href="https://business.facebook.com" target="_blank" class="cyber-link border-blue-light single-link no-bg">
+                        <div class="link-left"><span class="square bg-white" style="opacity: 0.7"></span> Meta Business</div>
+                        <div class="link-right">business.facebook.com <span class="arrow">→</span></div>
+                    </a>
+                </div>
+
+                <!-- TIKTOK ADS -->
+                <div class="custom-card inner-card card-red-dark">
+                    <h3 class="card-title text-red"><span class="square bg-red"></span> TIKTOK ADS</h3>
+                    <p class="text-gray mb-3" style="font-size: 0.85rem;">Mayor potencial, menor costo por cliente</p>
+                    
+                    <ul class="feature-list list-red mb-4" style="font-size: 0.9rem;">
+                        <li><span>-</span> Cuenta con VPN USA activo</li>
+                        <li><span>-</span> Píxel de TikTok en tu tienda</li>
+                        <li><span>-</span> Contenido que funciona como anuncio</li>
+                    </ul>
+
+                    <a href="https://ads.tiktok.com" target="_blank" class="cyber-link border-red single-link no-bg">
+                        <div class="link-left"><span class="square bg-red"></span> TikTok Ads</div>
+                        <div class="link-right">ads.tiktok.com <span class="arrow">→</span></div>
+                    </a>
+                </div>
+            </div>
+
+            <p class="note-text mt-4 mb-2"><span class="square bg-yellow"></span> Crea TikTok Ads con una VPN de Estados Unidos activa para acceder a más funciones y mejores condiciones.</p>
+            <p class="note-text"><span class="square bg-red"></span> <span class="text-red">No configures ninguna cuenta publicitaria sin haber visto primero el módulo de publicidad.</span></p>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="particles.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

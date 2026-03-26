@@ -375,9 +375,251 @@ h1, h2, h3, h4, .panel-title {
 }
 
 /* =========================================
-   PRINT STYLES FOR EXPORT TO PDF
+   ENLACES DE AFILIACION (NEW AESTHETIC)
    ========================================= */
 
+.grid-bg {
+    background-color: #050505;
+    background-image: 
+        linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.links-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.custom-card {
+    background: #050505; /* Solid black to cover grid */
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 1.5rem;
+    position: relative;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.inner-card {
+    border-width: 1px;
+    padding: 1rem;
+}
+
+/* Colors and Borders */
+.card-red { border-color: #ff4444; }
+.card-green { border-color: #00ff55; }
+.card-blue { border-color: #3498db; }
+.card-purple { border-color: #a855f7; }
+.card-green-alt { border-color: #00ff55; }
+.card-yellow { border-color: #f1c40f; }
+.card-blue-dark { border-color: #3b82f6; }
+.card-red-dark { border-color: #ff3366; }
+
+/* Text Colors */
+.text-red { color: #ff4444; }
+.text-green { color: #00ff55; }
+.text-blue { color: #3498db; }
+.text-purple { color: #a855f7; }
+.text-yellow { color: #f1c40f; }
+.text-blue-light { color: #3b82f6; }
+.text-gray { color: #a0a0a0; font-size: 0.95rem; }
+.text-white { color: #ffffff; }
+
+/* Square Icons */
+.square {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.bg-red { background-color: #ff4444; }
+.bg-green { background-color: #00ff55; }
+.bg-blue { background-color: #3498db; }
+.bg-purple { background-color: #a855f7; }
+.bg-yellow { background-color: #f1c40f; }
+.bg-white { background-color: #ffffff; }
+.bg-blue-light { background-color: #3b82f6; }
+.bg-orange { background-color: #ff6600; }
+.bg-orange-dark { background-color: #cc5500; }
+.bg-lime { background-color: #99ff00; }
+.bg-lime-light { background-color: #aaff00; }
+
+/* Utilities */
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mt-4 { margin-top: 1.5rem; }
+
+.card-title {
+    font-size: 1.1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+}
+
+.list-green li span { color: #00ff55; }
+.list-blue li span { color: #3498db; }
+.list-blue-light li span { color: #3b82f6; }
+.list-red li span { color: #ff4444; }
+
+/* Cyber Links */
+.links-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cyber-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 0.5rem 0.8rem;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 250px;
+}
+
+.cyber-link.no-bg {
+    background: transparent;
+}
+
+.single-link {
+    max-width: 100%;
+}
+
+.cyber-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.cyber-link.border-green { border-color: #00ff55; color: #00ff55; }
+.cyber-link.border-purple { border-color: #a855f7; color: #a855f7; }
+.cyber-link.border-blue { border-color: #3498db; color: #3498db; }
+.cyber-link.border-blue-light { border-color: #3b82f6; color: #3b82f6; }
+.cyber-link.border-red { border-color: #ff3366; color: #ff3366; }
+
+.cyber-link.border-green .link-right { color: #00ff55; }
+.cyber-link.border-purple .link-right { color: #a855f7; }
+.cyber-link.border-blue .link-right { color: #3498db; }
+.cyber-link.border-blue-light .link-right { color: #3b82f6; }
+.cyber-link.border-red .link-right { color: #ff3366; }
+
+.cyber-link .link-left {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: 500;
+}
+
+.cyber-link .link-right {
+    opacity: 0.8;
+}
+
+.arrow {
+    margin-left: 4px;
+}
+
+.note-text {
+    font-size: 0.85rem;
+    color: #a0a0a0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.note-text .square {
+    margin-top: 4px;
+    min-width: 10px;
+}
+
+.dot-separator {
+    margin: 0 8px;
+    color: #555;
+}
+
+/* Benefits Grid (Release It) */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.benefit-box {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.6rem;
+    border-radius: 4px;
+    color: #000;
+}
+
+.benefit-box .square {
+    margin-top: 4px;
+    min-width: 10px;
+}
+
+.benefit-box strong {
+    display: block;
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+.benefit-box span {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.bg-orange { background-color: #ff6600; }
+.bg-orange-dark { background-color: #cc5500; color: #fff; }
+.bg-lime { background-color: #99ff00; }
+.bg-lime-light { background-color: #aaff00; }
+
+/* Ads Container */
+.ads-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .benefits-grid, .ads-container, .links-row {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+}
+
+/* =========================================
+   PRINT STYLES FOR EXPORT TO PDF
+   ========================================= */
 @media print {
     body {
         background: white !important;
