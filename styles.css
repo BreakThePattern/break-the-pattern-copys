@@ -603,6 +603,96 @@ h1, h2, h3, h4, .panel-title {
 .bg-lime { background-color: #99ff00; }
 .bg-lime-light { background-color: #aaff00; }
 
+/* Extensions List Aesthetic */
+.ext-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.ext-item {
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ext-item::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00ff55;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f08e"; /* External link icon */
+    opacity: 0;
+    transition: all 0.3s;
+    font-size: 1.2rem;
+}
+
+.ext-item:hover {
+    background: rgba(0, 255, 136, 0.05);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.05);
+    transform: translateX(8px);
+}
+
+.ext-item:hover::after {
+    opacity: 1;
+    right: 15px;
+}
+
+.ext-title {
+    color: #00ff55;
+    font-size: 1.2rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.ext-desc {
+    border-left: 2px solid #00ff55;
+    margin-left: 4px; /* to theoretically align center with the 10px square */
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.ext-desc::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 15px;
+    height: 2px;
+    background: #00ff55;
+    border-radius: 0 2px 2px 0;
+}
+
+.ext-desc p {
+    color: #a0a0a0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    transition: color 0.3s;
+    max-width: 85%;
+}
+
+.ext-item:hover .ext-desc p {
+    color: #ffffff;
+}
+
 /* Ads Container */
 .ads-container {
     display: grid;
