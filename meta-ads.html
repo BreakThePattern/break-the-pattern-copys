@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuraciones Iniciales Meta Ads | Break The Pattern</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .step-card {
+            background: rgba(10, 10, 10, 0.8);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 255, 136, 0.15);
+            border-color: rgba(0, 255, 136, 0.5);
+        }
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 255, 136, 0.1);
+            color: #00ff55;
+            border-radius: 50%;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            border: 1px solid rgba(0, 255, 136, 0.5);
+            box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+        }
+        .step-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1rem;
+        }
+        .step-header h3 {
+            margin: 0;
+            font-size: 1.4rem;
+            color: #fff;
+        }
+        .step-content p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .step-content strong {
+            color: #fff;
+        }
+        .image-placeholder {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px dashed rgba(0, 255, 136, 0.3);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            margin: 1.5rem 0;
+            color: rgba(0, 255, 136, 0.8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .image-placeholder:hover {
+            background: rgba(0, 255, 136, 0.05);
+            border-color: #00ff55;
+            color: #00ff55;
+        }
+        .image-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .important-note {
+            background: rgba(255, 193, 7, 0.1);
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+        .important-note p {
+            margin: 0;
+            color: #fff !important;
+        }
+        .important-note i {
+            color: #ffc107;
+            margin-right: 0.5rem;
+        }
+        .columns-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .col-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.8rem;
+            border-radius: 6px;
+            border-left: 3px solid #00ff55;
+            font-size: 0.9rem;
+            color: #ddd;
+        }
+        .metric-box {
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        .metric-box h4 {
+            color: #00ff55;
+            margin-bottom: 0.5rem;
+        }
+        .metric-equation {
+            font-family: monospace;
+            background: #000;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            color: #ccc;
+            text-align: center;
+            display: block;
+        }
+        img.real-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            margin: 1.5rem 0;
+        }
+    </style>
+</head>
+<body class="grid-bg">
+    <canvas id="particleCanvas"></canvas>
+    
+    <div class="container links-container">
+        
+        <!-- HEADER -->
+        <header class="header" style="margin-bottom: 2rem;">
+            <div class="logo-container" style="margin-bottom: 1rem;">
+                <img src="assets/logo.png" alt="Break The Pattern Logo" class="brand-logo" style="max-width: 250px;">
+            </div>
+            
+            <div class="kai-avatar-container" style="width: 120px; height: 120px;">
+                <div class="avatar-glow"></div>
+                <img src="assets/avatar.jpg" alt="Kai Avatar" class="kai-avatar">
+            </div>
+
+            <div class="header-text">
+                <h1 class="main-title" style="font-size: 2.2rem; margin-top: 1rem;">MÓDULO DE <span class="text-glow">META ADS</span></h1>
+                <p class="kai-message" style="margin-top: 0.5rem;"><i class="fa-solid fa-bolt"></i> KAI: EJECUTA. AJUSTA. EVOLUCIONA.</p>
+                <p class="text-gray" style="margin-top: 1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    El paso a paso exacto para realizar tus primeras configuraciones en Meta y dejar listo tu ecosistema.
+                </p>
+            </div>
+
+            <!-- NAVIGATION -->
+            <div class="nav-links" style="margin-top: 2rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="index.html" class="nav-btn"><i class="fa-solid fa-terminal"></i> Generador de Copys</a>
+                <a href="avatar.html" class="nav-btn"><i class="fa-solid fa-user-astronaut"></i> Generador de Avatar</a>
+                <a href="enlaces.html" class="nav-btn"><i class="fa-solid fa-link"></i> Herramientas Oficiales</a>
+                <a href="extensiones.html" class="nav-btn"><i class="fa-solid fa-puzzle-piece"></i> Extensiones de Chrome</a>
+                <a href="meta-ads.html" class="nav-btn" style="border-color: #00ff55; color: #00ff55;"><i class="fa-solid fa-bullseye"></i> Configuraciones Meta Ads</a>
+            </div>
+        </header>
+
+        <main>
+            <div class="intro-box mb-5">
+                <i class="fa-brands fa-meta prompt-icon"></i>
+                <h2>CONFIGURACIONES INICIALES EN META ADS</h2>
+                <p>No te preocupes si no entiendes bien cada concepto que verás, recuerda que inicialmente solo nos enfocaremos en dejar el ecosistema listo y más adelante podremos comenzar a aprender y familiarizarnos más con todo lo que nos ofrece Meta Ads. Iniciemos:</p>
+            </div>
+
+            <!-- PASO 1 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">1</div>
+                    <h3>Ten abierto tu perfil</h3>
+                </div>
+                <div class="step-content">
+                    <p>Asegúrate de estar en el navegador por el que ingresarás siempre a tu perfil de Facebook y de estar logueado en el perfil personal que utilizarás para crear tu ecosistema. Te recomendamos utilizar uno que tenga actividad y antigüedad para evitar bloqueos.</p>
+                    <p><strong>Verifica que puedas ver esta pantalla al ingresar a facebook.com:</strong></p>
+                    
+                    <div class="image-placeholder">
+                        <i class="fa-regular fa-image"></i>
+                        <p><strong>[CAPTURA DE PANTALLA REQUERIDA]</strong><br>Sube aquí la imagen "Paso 1 - Inicio de Facebook" nombrando tu imagen como <code>meta-01.jpg</code> en la carpeta <code>assets/</code></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PASO 2 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">2</div>
+                    <h3>Creemos nuestro administrador comercial</h3>
+                </div>
+                <div class="step-content">
+                    <p><strong>1)</strong> Ingresa a <code>business.facebook.com/overview</code> y haz clic en <strong>“Crear una cuenta”</strong>.</p>
+                    <div class="image-placeholder">
+                        <i class="fa-regular fa-image"></i>
+                        <p><strong>[CAPTURA DE PANTALLA REQUERIDA]</strong></p>
+                    </div>
+                    
+                    <p><strong>2)</strong> Ingresa un <strong>nombre para tu negocio y cuenta</strong> (si no tienes una marca aún, puedes escribir tu nombre), también escribe tu <strong>nombre</strong> y por último un <strong>correo electrónico</strong> al que tengas acceso. Haz clic en <strong>“Enviar”</strong>.</p>
+                    
+                    <p>Luego de hacerlo, te saldrá una indicación para confirmar tu correo, dale <strong>"Listo"</strong>.</p>
+                    <p><strong>3)</strong> Ingresa a la bandeja de entrada de tu correo y busca el email de confirmación. Haz clic en el botón <strong>"Confirmar"</strong>.</p>
+                </div>
+            </div>
+
+            <!-- PASO 3 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">3</div>
+                    <h3>Creemos nuestra fanpage de Facebook</h3>
+                </div>
+                <div class="step-content">
+                    <p><strong>1)</strong> Ingresa a <code>business.facebook.com/settings</code> y selecciona el negocio que acabas de crear.</p>
+                    <p><strong>2)</strong> Busca en la barra izquierda la opción de <strong>"Páginas"</strong>, ingresa y haz clic en <strong>"Agregar"</strong>.</p>
+                    
+                    <div class="important-note">
+                        <p><i class="fa-solid fa-triangle-exclamation"></i> <strong>IMPORTANTE:</strong> Si YA tienes una página de Facebook creada para el negocio que iniciarás y tu perfil es administrador de la misma, debes dar clic en "Agregar una página" o "Agregar una página de Facebook existente" y seguir las instrucciones.</p>
+                    </div>
+
+                    <p><strong>3)</strong> Si aún no creas la página, haz clic en <strong>"Crear una página"</strong>. Ingresa el nombre de la página, escoge una categoría ("Publicidad / Marketing") y escribe una breve presentación.</p>
+                    <p><strong>4)</strong> Haz clic en la casilla de "Acepto las condiciones" y luego en el botón <strong>"Crear página"</strong>.</p>
+                    <p><strong>5)</strong> Da clic en <strong>"Ver en Facebook"</strong>, luego en <strong>"Cambiar"</strong>.</p>
+                    <p><strong>6)</strong> Por último, darás clic en <strong>"Editar"</strong> y allí subirás una foto de perfil y foto de portada. Por ahora, solo necesitas estas dos cosas.</p>
+                </div>
+            </div>
+
+            <!-- PASO 4 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">4</div>
+                    <h3>Conectemos nuestra fanpage con Instagram</h3>
+                </div>
+                <div class="step-content">
+                    <div class="important-note mb-4">
+                        <p><i class="fa-solid fa-triangle-exclamation"></i> <strong>IMPORTANTE:</strong> Si estás iniciando de cero y NO tienes aún un Instagram para tu negocio, NO necesitas crear ni conectar una cuenta, así que puedes saltar este paso.</p>
+                    </div>
+                    
+                    <p><strong>1)</strong> Dentro de tu página de Facebook, ingresa a <strong>"Configuración"</strong> en el menú izquierdo.</p>
+                    <p><strong>2)</strong> Da clic en <strong>"Cuentas vinculadas"</strong>, luego dirígete a <strong>"Instagram"</strong> y haz clic en <strong>"Conectar cuenta"</strong>.</p>
+                    <p><strong>3)</strong> Haz clic en <strong>"Conectar"</strong>, asegúrate de tener habilitado "Permitir acceso a los mensajes" y por último haz clic en <strong>"Confirmar"</strong>.</p>
+                    <p><strong>4)</strong> Ingresa a la cuenta de Instagram con usuario y clave, y completa la información solicitada.</p>
+                </div>
+            </div>
+
+            <!-- PASO 5 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">5</div>
+                    <h3>Creemos nuestra Cuenta Publicitaria</h3>
+                </div>
+                <div class="step-content">
+                    <p><strong>1)</strong> Vuelve a ingresar a <code>business.facebook.com/settings</code> y selecciona el negocio que ya creaste.</p>
+                    <p><strong>2)</strong> Busca e ingresa a <strong>"Cuentas publicitarias"</strong>, haz clic en "Agregar" y finalmente en <strong>"Crear una cuenta publicitaria nueva"</strong>.</p>
+                    <p><strong>3)</strong> Añade un Nombre, selecciona la <strong>Zona horaria</strong> de tu país local y la <strong>Divisa</strong> de tu moneda local.</p>
+                    <p><strong>4)</strong> En "Uso" selecciona "Mi negocio", haz clic en Siguiente y luego en el botón <strong>"Crear cuenta publicitaria"</strong>.</p>
+                    
+                    <div class="image-placeholder">
+                        <i class="fa-regular fa-credit-card"></i>
+                        <p><strong>[CAPTURA DE PAGO REQUERIDA]</strong></p>
+                    </div>
+
+                    <p><strong>5)</strong> Haz clic en "Agregar información de pago", confirma Zona y Divisa y dale Siguiente. (¡Atención! Esto no se puede cambiar después).</p>
+                    <p><strong>6)</strong> Selecciona <strong>"Tarjeta de débito o crédito"</strong>, y añade tu información fiscal (Ej. tu RUT en Colombia) para evitar cobros de IVA excesivos.</p>
+                    <p><strong>7)</strong> Añade la información de tu tarjeta y presiona <strong>"Guardar"</strong>. ¡Listo, cuenta publicitaria creada!</p>
+                </div>
+            </div>
+
+            <!-- PASO 6 -->
+            <div class="step-card">
+                <div class="step-header">
+                    <div class="step-number">6</div>
+                    <h3>Preparemos nuestras columnas</h3>
+                </div>
+                <div class="step-content">
+                    <p><strong>1)</strong> Ve al <strong>Administrador de anuncios</strong> desde el menú hamburguesa izquierdo.</p>
+                    <p><strong>2)</strong> Haz clic en "Columnas: Rendimiento" y luego en <strong>"Personalizar columnas"</strong>.</p>
+                    <p><strong>3)</strong> Elimina todas las seleccionadas pulsando la "X", excepto las esenciales, y busca las métricas en el buscador exactas.</p>
+                    
+                    <h4 class="mt-4 text-white">Métricas Personales a Crear:</h4>
+                    <p>Crea 3 columnas personalizadas desde "Crear métrica personalizada":</p>
+                    
+                    <div class="metric-box">
+                        <h4>1. Hook Rate</h4>
+                        <span class="metric-equation">Reproducciones de video 3s / Impresiones</span>
+                    </div>
+                    <div class="metric-box">
+                        <h4>2. Hold Rate</h4>
+                        <span class="metric-equation">ThruPlays / Reproducciones de video 3s</span>
+                    </div>
+                    <div class="metric-box">
+                        <h4>3. % Clic a mensaje</h4>
+                        <span class="metric-equation">Conversaciones iniciadas / Clics en enlace</span>
+                    </div>
+
+                    <p class="mt-4"><strong>4)</strong> Ahora ubica cada columna arrastrándolas hasta lograr el orden exacto.</p>
+                    <p><strong>5)</strong> Finalmente, haz clic en "Guardar como valor predefinido" y ponle el nombre <strong>"WhatsApp"</strong>.</p>
+                </div>
+            </div>
+
+            <div class="custom-card card-green mt-5" style="text-align: center;">
+                <h3 class="text-green"><i class="fa-solid fa-flag-checkered"></i> ¡FELICIDADES CRACK!</h3>
+                <p class="text-white mt-3">Espero que hayas podido realizar todas las configuraciones sin inconveniente alguno. Recuerda revisar de nuevo de arriba a abajo para asegurar que todo quedó correctamente configurado.</p>
+                <div class="pro-tip mt-4" style="text-align: left;">
+                    <img src="assets/avatar.jpg" alt="Kai" class="small-kai">
+                    <div class="pro-tip-content">
+                        <h4>CONSEJO DE KAI</h4>
+                        <p>Meta actualiza frecuentemente sus interfaces. No te asustes si ves los botones ligeramente distintos; la estructura y funcionalidad siempre es la misma.</p>
+                        <p class="text-white mt-1" style="font-weight: bold;">Espero seguirte viendo avanzar y tener resultados. ¡Tú Puedes!</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- DROP FX FOOTER -->
+    <div style="text-align: center; padding-bottom: 3rem; margin-top: 2rem;">
+        <p class="text-gray" style="font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 1rem; text-transform: uppercase;">Herramienta exclusiva para escalar tus ventas</p>
+        <a href="https://dropfx.vercel.app" target="_blank" style="display: inline-block; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <img src="assets/dropfx_logo.png" alt="DropFX" style="max-width: 180px; filter: drop-shadow(0 0 15px rgba(0, 255, 136, 0.4));">
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="particles.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
