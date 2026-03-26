@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { background: #111; color: #fff; font-family: sans-serif; padding: 20px; }
+        .img-container { margin-bottom: 50px; border: 2px solid #00ff55; padding: 20px; }
+        h2 { color: #00ff55; font-size: 30px; }
+        img { max-width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+    <h1>Galería de Screenshots de Meta Ads</h1>
+    <script>
+        for(let i=1; i<=37; i++) {
+            let num = i.toString().padStart(2, '0');
+            document.write(`
+                <div class="img-container" id="img-${num}">
+                    <h2>meta-${num}.jpg.png</h2>
+                    <img src="assets/meta-${num}.jpg.png" alt="meta-${num}">
+                </div>
+            `);
+        }
+    </script>
+</body>
+</html>
