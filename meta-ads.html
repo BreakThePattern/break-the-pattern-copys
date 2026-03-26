@@ -23,7 +23,6 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .step-card:hover {
-            transform: translateY(-5px);
             box-shadow: 0 8px 30px rgba(0, 255, 136, 0.15);
             border-color: rgba(0, 255, 136, 0.5);
         }
@@ -63,32 +62,6 @@
         .step-content strong {
             color: #fff;
         }
-        .image-placeholder {
-            width: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            border: 2px dashed rgba(0, 255, 136, 0.3);
-            border-radius: 8px;
-            padding: 2rem;
-            text-align: center;
-            margin: 1.5rem 0;
-            color: rgba(0, 255, 136, 0.8);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 200px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .image-placeholder:hover {
-            background: rgba(0, 255, 136, 0.05);
-            border-color: #00ff55;
-            color: #00ff55;
-        }
-        .image-placeholder i {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
         .important-note {
             background: rgba(255, 193, 7, 0.1);
             border-left: 4px solid #ffc107;
@@ -103,20 +76,6 @@
         .important-note i {
             color: #ffc107;
             margin-right: 0.5rem;
-        }
-        .columns-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        .col-item {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 0.8rem;
-            border-radius: 6px;
-            border-left: 3px solid #00ff55;
-            font-size: 0.9rem;
-            color: #ddd;
         }
         .metric-box {
             background: rgba(0, 255, 136, 0.05);
@@ -138,12 +97,23 @@
             text-align: center;
             display: block;
         }
-        img.real-img {
+        .real-img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
             border: 1px solid rgba(0, 255, 136, 0.3);
             margin: 1.5rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        .step-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+        .step-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
     </style>
 </head>
@@ -197,11 +167,7 @@
                 <div class="step-content">
                     <p>Asegúrate de estar en el navegador por el que ingresarás siempre a tu perfil de Facebook y de estar logueado en el perfil personal que utilizarás para crear tu ecosistema. Te recomendamos utilizar uno que tenga actividad y antigüedad para evitar bloqueos.</p>
                     <p><strong>Verifica que puedas ver esta pantalla al ingresar a facebook.com:</strong></p>
-                    
-                    <div class="image-placeholder">
-                        <i class="fa-regular fa-image"></i>
-                        <p><strong>[CAPTURA DE PANTALLA REQUERIDA]</strong><br>Sube aquí la imagen "Paso 1 - Inicio de Facebook" nombrando tu imagen como <code>meta-01.jpg</code> en la carpeta <code>assets/</code></p>
-                    </div>
+                    <img src="assets/meta-01.jpg.png" class="real-img" alt="Meta Ads Paso 1">
                 </div>
             </div>
 
@@ -212,16 +178,27 @@
                     <h3>Creemos nuestro administrador comercial</h3>
                 </div>
                 <div class="step-content">
-                    <p><strong>1)</strong> Ingresa a <code>business.facebook.com/overview</code> y haz clic en <strong>“Crear una cuenta”</strong>.</p>
-                    <div class="image-placeholder">
-                        <i class="fa-regular fa-image"></i>
-                        <p><strong>[CAPTURA DE PANTALLA REQUERIDA]</strong></p>
+                    <div class="step-item">
+                        <p><strong>1)</strong> Ingresa a <code>business.facebook.com/overview</code> y haz clic en <strong>“Crear una cuenta”</strong>.</p>
+                        <img src="assets/meta-02.jpg.png" class="real-img" alt="Crear cuenta">
                     </div>
                     
-                    <p><strong>2)</strong> Ingresa un <strong>nombre para tu negocio y cuenta</strong> (si no tienes una marca aún, puedes escribir tu nombre), también escribe tu <strong>nombre</strong> y por último un <strong>correo electrónico</strong> al que tengas acceso. Haz clic en <strong>“Enviar”</strong>.</p>
-                    
-                    <p>Luego de hacerlo, te saldrá una indicación para confirmar tu correo, dale <strong>"Listo"</strong>.</p>
-                    <p><strong>3)</strong> Ingresa a la bandeja de entrada de tu correo y busca el email de confirmación. Haz clic en el botón <strong>"Confirmar"</strong>.</p>
+                    <div class="step-item">
+                        <p><strong>2)</strong> Ingresa un <strong>nombre para tu negocio y cuenta</strong> (si no tienes una marca aún, puedes escribir tu nombre), también escribe tu <strong>nombre</strong> y por último un <strong>correo electrónico</strong> al que tengas acceso. Haz clic en <strong>“Enviar”</strong>.</p>
+                        <img src="assets/meta-03.jpg.png" class="real-img" alt="Datos de negocio">
+                        <p>Luego de hacerlo, te saldrá una indicación para confirmar tu correo, dale <strong>"Listo"</strong>.</p>
+                        <img src="assets/meta-04.jpg.png" class="real-img" alt="Confirmación">
+                    </div>
+
+                    <div class="step-item">
+                        <p><strong>3)</strong> Ingresa a la bandeja de entrada de tu correo y busca el email de confirmación.</p>
+                        <img src="assets/meta-05.jpg.png" class="real-img" alt="Bandeja de correo">
+                    </div>
+
+                    <div class="step-item">
+                        <p><strong>4)</strong> Haz clic en el botón <strong>"Confirmar"</strong>.</p>
+                        <img src="assets/meta-06.jpg.png" class="real-img" alt="Botón Confirmar">
+                    </div>
                 </div>
             </div>
 
@@ -232,17 +209,44 @@
                     <h3>Creemos nuestra fanpage de Facebook</h3>
                 </div>
                 <div class="step-content">
-                    <p><strong>1)</strong> Ingresa a <code>business.facebook.com/settings</code> y selecciona el negocio que acabas de crear.</p>
-                    <p><strong>2)</strong> Busca en la barra izquierda la opción de <strong>"Páginas"</strong>, ingresa y haz clic en <strong>"Agregar"</strong>.</p>
-                    
-                    <div class="important-note">
-                        <p><i class="fa-solid fa-triangle-exclamation"></i> <strong>IMPORTANTE:</strong> Si YA tienes una página de Facebook creada para el negocio que iniciarás y tu perfil es administrador de la misma, debes dar clic en "Agregar una página" o "Agregar una página de Facebook existente" y seguir las instrucciones.</p>
+                    <div class="step-item">
+                        <p><strong>1)</strong> Ingresa a <code>business.facebook.com/settings</code> y selecciona el negocio que acabas de crear.</p>
+                        <img src="assets/meta-07.jpg.png" class="real-img" alt="Seleccionar negocio">
                     </div>
 
-                    <p><strong>3)</strong> Si aún no creas la página, haz clic en <strong>"Crear una página"</strong>. Ingresa el nombre de la página, escoge una categoría ("Publicidad / Marketing") y escribe una breve presentación.</p>
-                    <p><strong>4)</strong> Haz clic en la casilla de "Acepto las condiciones" y luego en el botón <strong>"Crear página"</strong>.</p>
-                    <p><strong>5)</strong> Da clic en <strong>"Ver en Facebook"</strong>, luego en <strong>"Cambiar"</strong>.</p>
-                    <p><strong>6)</strong> Por último, darás clic en <strong>"Editar"</strong> y allí subirás una foto de perfil y foto de portada. Por ahora, solo necesitas estas dos cosas.</p>
+                    <div class="step-item">
+                        <p><strong>2)</strong> Busca en la barra izquierda la opción de <strong>"Páginas"</strong>, ingresa y haz clic en <strong>"Agregar"</strong>.</p>
+                        <img src="assets/meta-08.jpg.png" class="real-img" alt="Agregar Página">
+                        
+                        <div class="important-note">
+                            <p><i class="fa-solid fa-triangle-exclamation"></i> <strong>IMPORTANTE:</strong> Si YA tienes una página de Facebook creada para el negocio que iniciarás y tu perfil es administrador de la misma, debes dar clic en "Agregar una página" o "Agregar una página de Facebook existente" y seguir las instrucciones.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <p><strong>3)</strong> Si aún no creas la página, haz clic en <strong>"Crear una página"</strong>. Ingresa el nombre de la página, escoge una categoría ("Publicidad / Marketing") y escribe una breve presentación.</p>
+                        <img src="assets/meta-09.jpg.png" class="real-img" alt="Crear Página Info">
+                    </div>
+
+                    <div class="step-item">
+                        <p><strong>4)</strong> Haz clic en la casilla de "Acepto las condiciones" y luego en el botón <strong>"Crear página"</strong>.</p>
+                        <img src="assets/meta-10.jpg.png" class="real-img" alt="Acepto Condiciones">
+                    </div>
+
+                    <div class="step-item">
+                        <p><strong>5)</strong> Da clic en <strong>"Ver en Facebook"</strong>.</p>
+                        <img src="assets/meta-11.jpg.png" class="real-img" alt="Ver en FB">
+                    </div>
+
+                    <div class="step-item">
+                        <p><strong>6)</strong> Luego haz clic en <strong>"Cambiar"</strong>.</p>
+                        <img src="assets/meta-12.jpg.png" class="real-img" alt="Cambiar cuenta">
+                    </div>
+
+                    <div class="step-item">
+                        <p><strong>7)</strong> Por último, darás clic en <strong>"Editar"</strong> y allí subirás una foto de perfil y foto de portada. Por ahora, solo necesitas estas dos cosas.</p>
+                        <img src="assets/meta-13.jpg.png" class="real-img" alt="Editar Fotos">
+                    </div>
                 </div>
             </div>
 
@@ -257,10 +261,32 @@
                         <p><i class="fa-solid fa-triangle-exclamation"></i> <strong>IMPORTANTE:</strong> Si estás iniciando de cero y NO tienes aún un Instagram para tu negocio, NO necesitas crear ni conectar una cuenta, así que puedes saltar este paso.</p>
                     </div>
                     
-                    <p><strong>1)</strong> Dentro de tu página de Facebook, ingresa a <strong>"Configuración"</strong> en el menú izquierdo.</p>
-                    <p><strong>2)</strong> Da clic en <strong>"Cuentas vinculadas"</strong>, luego dirígete a <strong>"Instagram"</strong> y haz clic en <strong>"Conectar cuenta"</strong>.</p>
-                    <p><strong>3)</strong> Haz clic en <strong>"Conectar"</strong>, asegúrate de tener habilitado "Permitir acceso a los mensajes" y por último haz clic en <strong>"Confirmar"</strong>.</p>
-                    <p><strong>4)</strong> Ingresa a la cuenta de Instagram con usuario y clave, y completa la información solicitada.</p>
+                    <div class="step-item">
+                        <p><strong>1)</strong> Dentro de tu página de Facebook, ingresa a <strong>"Configuración"</strong> en el menú izquierdo.</p>
+                        <img src="assets/meta-14.jpg.png" class="real-img" alt="Configuración FB">
+                    </div>
+
+                    <div class="step-item">
+                        <p><strong>2)</strong> Da clic en <strong>"Cuentas vinculadas"</strong>, luego dirígete a <strong>"Instagram"</strong> y haz clic en <strong>"Conectar cuenta"</strong>.</p>
+                        <img src="assets/meta-15.jpg.png" class="real-img" alt="Conectar IG">
+                    </div>
+
+                    <div class="step-item">
+                        <p><strong>3)</strong> Haz clic en <strong>"Conectar"</strong>, asegúrate de tener habilitado "Permitir acceso a los mensajes" y por último haz clic en <strong>"Confirmar"</strong>.</p>
+                        <img src="assets/meta-16.jpg.png" class="real-img" alt="Confirmar permisos">
+                    </div>
+
+                    <div class="step-item">
+                        <p><strong>4)</strong> Ingresa a la cuenta de Instagram con usuario y clave.</p>
+                        <img src="assets/meta-17.jpg.png" class="real-img" alt="Login IG">
+                    </div>
+
+                    <div class="step-item">
+                        <p><strong>5)</strong> Completa la información solicitada.</p>
+                        <img src="assets/meta-18.jpg.png" class="real-img" alt="Info IG">
+                        <p>Ahora podrás cerrar la ventana y te aparecerá una confirmación de conexión exitosa.</p>
+                        <img src="assets/meta-19.jpg.png" class="real-img" alt="IG Conectado Exitosamente">
+                    </div>
                 </div>
             </div>
 
@@ -271,19 +297,45 @@
                     <h3>Creemos nuestra Cuenta Publicitaria</h3>
                 </div>
                 <div class="step-content">
-                    <p><strong>1)</strong> Vuelve a ingresar a <code>business.facebook.com/settings</code> y selecciona el negocio que ya creaste.</p>
-                    <p><strong>2)</strong> Busca e ingresa a <strong>"Cuentas publicitarias"</strong>, haz clic en "Agregar" y finalmente en <strong>"Crear una cuenta publicitaria nueva"</strong>.</p>
-                    <p><strong>3)</strong> Añade un Nombre, selecciona la <strong>Zona horaria</strong> de tu país local y la <strong>Divisa</strong> de tu moneda local.</p>
-                    <p><strong>4)</strong> En "Uso" selecciona "Mi negocio", haz clic en Siguiente y luego en el botón <strong>"Crear cuenta publicitaria"</strong>.</p>
-                    
-                    <div class="image-placeholder">
-                        <i class="fa-regular fa-credit-card"></i>
-                        <p><strong>[CAPTURA DE PAGO REQUERIDA]</strong></p>
+                    <div class="step-item">
+                        <p><strong>1)</strong> Vuelve a ingresar a <code>business.facebook.com/settings</code> y selecciona el negocio.</p>
+                        <img src="assets/meta-20.jpg.png" class="real-img" alt="Seleccionar Negocio">
                     </div>
 
-                    <p><strong>5)</strong> Haz clic en "Agregar información de pago", confirma Zona y Divisa y dale Siguiente. (¡Atención! Esto no se puede cambiar después).</p>
-                    <p><strong>6)</strong> Selecciona <strong>"Tarjeta de débito o crédito"</strong>, y añade tu información fiscal (Ej. tu RUT en Colombia) para evitar cobros de IVA excesivos.</p>
-                    <p><strong>7)</strong> Añade la información de tu tarjeta y presiona <strong>"Guardar"</strong>. ¡Listo, cuenta publicitaria creada!</p>
+                    <div class="step-item">
+                        <p><strong>2)</strong> Busca e ingresa a <strong>"Cuentas publicitarias"</strong>, haz clic en "Agregar" y finalmente en <strong>"Crear una cuenta publicitaria nueva"</strong>.</p>
+                        <img src="assets/meta-21.jpg.png" class="real-img" alt="Crear Cuenta Publicitaria">
+                    </div>
+
+                    <div class="step-item">
+                        <p><strong>3)</strong> Añade un Nombre, selecciona la <strong>Zona horaria</strong> de tu país y la <strong>Divisa</strong> local.</p>
+                        <img src="assets/meta-22.jpg.png" class="real-img" alt="Datos de moneda y zona">
+                    </div>
+
+                    <div class="step-item">
+                        <p><strong>4)</strong> En "Uso" selecciona "Mi negocio", haz clic en Siguiente y luego en el botón <strong>"Crear cuenta publicitaria"</strong>.</p>
+                        <img src="assets/meta-23.jpg.png" class="real-img" alt="Uso Mi Negocio">
+                    </div>
+
+                    <div class="step-item">
+                        <p><strong>5)</strong> Haz clic en "Agregar información de pago", confirma Zona y Divisa y dale Siguiente. (¡Atención! Esto no se puede cambiar después).</p>
+                        <img src="assets/meta-24.jpg.png" class="real-img" alt="Agregar informacion de pago">
+                    </div>
+
+                    <div class="step-item">
+                        <p><strong>6)</strong> Selecciona <strong>"Tarjeta de débito o crédito"</strong> y edita la Información comercial.</p>
+                        <img src="assets/meta-25.jpg.png" class="real-img" alt="Metodo de pago">
+                    </div>
+
+                    <div class="step-item">
+                        <p><strong>7)</strong> Añade tu información fiscal (Ej. tu RUT en Colombia) para evitar cobros de IVA excesivos en Meta y pulsa "Guardar".</p>
+                        <img src="assets/meta-26.jpg.png" class="real-img" alt="Info Fiscal">
+                    </div>
+
+                    <div class="step-item">
+                        <p><strong>8)</strong> Finalmente, añade la información de tu tarjeta y presiona <strong>"Guardar"</strong>.</p>
+                        <img src="assets/meta-27.jpg.png" class="real-img" alt="Guardar tarjeta">
+                    </div>
                 </div>
             </div>
 
@@ -294,28 +346,57 @@
                     <h3>Preparemos nuestras columnas</h3>
                 </div>
                 <div class="step-content">
-                    <p><strong>1)</strong> Ve al <strong>Administrador de anuncios</strong> desde el menú hamburguesa izquierdo.</p>
-                    <p><strong>2)</strong> Haz clic en "Columnas: Rendimiento" y luego en <strong>"Personalizar columnas"</strong>.</p>
-                    <p><strong>3)</strong> Elimina todas las seleccionadas pulsando la "X", excepto las esenciales, y busca las métricas en el buscador exactas.</p>
-                    
-                    <h4 class="mt-4 text-white">Métricas Personales a Crear:</h4>
-                    <p>Crea 3 columnas personalizadas desde "Crear métrica personalizada":</p>
-                    
-                    <div class="metric-box">
-                        <h4>1. Hook Rate</h4>
-                        <span class="metric-equation">Reproducciones de video 3s / Impresiones</span>
-                    </div>
-                    <div class="metric-box">
-                        <h4>2. Hold Rate</h4>
-                        <span class="metric-equation">ThruPlays / Reproducciones de video 3s</span>
-                    </div>
-                    <div class="metric-box">
-                        <h4>3. % Clic a mensaje</h4>
-                        <span class="metric-equation">Conversaciones iniciadas / Clics en enlace</span>
+                    <div class="step-item">
+                        <p><strong>1 - 2)</strong> Ve al <strong>Administrador de anuncios</strong> desde el menú izquierdo.</p>
+                        <img src="assets/meta-28.jpg.png" class="real-img" alt="Admin Anuncios">
                     </div>
 
-                    <p class="mt-4"><strong>4)</strong> Ahora ubica cada columna arrastrándolas hasta lograr el orden exacto.</p>
-                    <p><strong>5)</strong> Finalmente, haz clic en "Guardar como valor predefinido" y ponle el nombre <strong>"WhatsApp"</strong>.</p>
+                    <div class="step-item">
+                        <p><strong>3)</strong> Asegúrate de estar en tu cuenta. Selecciona "Columnas: Rendimiento" y luego en <strong>"Personalizar columnas"</strong>.</p>
+                        <img src="assets/meta-29.jpg.png" class="real-img" alt="Personalizar columnas">
+                    </div>
+
+                    <div class="step-item">
+                        <p><strong>4)</strong> Elimina todas las seleccionadas pulsando la "X", exceptuando las 7 métricas esenciales base.</p>
+                        <img src="assets/meta-30.jpg.png" class="real-img" alt="7 Metricas Base">
+                    </div>
+
+                    <div class="step-item">
+                        <p><strong>5)</strong> Con el buscador central, añade todas las columnas faltantes necesarias.</p>
+                        <img src="assets/meta-31.jpg.png" class="real-img" alt="Buscador columnas">
+                    </div>
+
+                    <div class="step-item">
+                        <h4 class="mt-4 text-white">Métricas Personales a Crear:</h4>
+                        <p><strong>6)</strong> Crea 3 columnas personalizadas desde "Crear métrica personalizada":</p>
+                        <img src="assets/meta-32.jpg.png" class="real-img" alt="Crear métrica">
+                        
+                        <div class="metric-box">
+                            <h4>1. Hook Rate</h4>
+                            <span class="metric-equation">Reproducciones de video 3s / Impresiones</span>
+                            <img src="assets/meta-33.jpg.png" class="real-img mt-3" alt="Hook rate formula">
+                        </div>
+                        <div class="metric-box">
+                            <h4>2. Hold Rate</h4>
+                            <span class="metric-equation">ThruPlays / Reproducciones de video 3s</span>
+                            <img src="assets/meta-34.jpg.png" class="real-img mt-3" alt="Hold rate formula">
+                        </div>
+                        <div class="metric-box">
+                            <h4>3. % Clic a mensaje</h4>
+                            <span class="metric-equation">Conversaciones iniciadas / Clics en enlace</span>
+                            <img src="assets/meta-35.jpg.png" class="real-img mt-3" alt="Clic conversacional formula">
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <p><strong>10)</strong> Finalmente, haz clic en "Guardar como valor predefinido de columna", escribe el nombre <strong>"WhatsApp"</strong> y pulsa Guardar.</p>
+                        <img src="assets/meta-36.jpg.png" class="real-img" alt="Guardar predefinido WhatsApp">
+                    </div>
+
+                    <div class="step-item">
+                        <p><strong>11)</strong> Asegúrate de que en "Columnas: ..." te aparezca seleccionada la configuración "WhatsApp" que acabamos de guardar.</p>
+                        <img src="assets/meta-37.jpg.png" class="real-img" alt="Confirmación Final WhatsApp">
+                    </div>
                 </div>
             </div>
 
