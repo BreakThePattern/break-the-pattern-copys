@@ -686,8 +686,9 @@ h1, h2, h3, h4, .panel-title {
     line-height: 1.6;
     margin: 0;
     transition: color 0.3s;
-    max-width: 85%;
+    max-width: 100%;
 }
+
 
 .ext-item:hover .ext-desc p {
     color: #ffffff;
@@ -701,7 +702,7 @@ h1, h2, h3, h4, .panel-title {
 }
 
 @media (max-width: 768px) {
-    .benefits-grid, .ads-container, .links-row {
+    .benefits-grid, .ads-container, .links-row, .affiliate-grid {
         grid-template-columns: 1fr;
         flex-direction: column;
     }
